@@ -100,5 +100,12 @@ nav ul {
   }
 
   .sublist {
-    font-size: 2em;
+    font-size: 1.5em;
+    
   }
+
+  .sublist-item {
+    list-style: none;
+  }
+
+  
