@@ -20,4 +20,4 @@ need to change either of these files
 
 node_modules directory has all the modules that node.js currently has installed for our project
 i don't know too much about any of them specifically but feel free to do more research
-if ya'll want to use any of them we totally can do that.
+if y'all want to use any of them we totally can do that.
