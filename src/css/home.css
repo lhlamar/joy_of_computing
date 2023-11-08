@@ -1,8 +1,3 @@
-html {
-  background-color: var(--onyx-dark);
-  color: var(--bone);
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -87,6 +82,12 @@ nav ul li {
 .hero-img {
   height: 300px;
   width: 300px;
+}
+
+.lesson-header {
+  font-size: 2em;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .lesson-nav-section {

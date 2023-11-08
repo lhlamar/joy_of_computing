@@ -10,5 +10,6 @@
 }
 
 html {
-  background-color: ;
+  background-color: var(--onyx-dark);
+  color: var(--bone);
 }
