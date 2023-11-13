@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../css/colors.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <link rel="stylesheet" href="../css/utils.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/prismjs/themes/prism-tomorrow.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concepts of Object-Oriented Programming</title>
   </head>
@@ -39,13 +43,158 @@
     </section>
 
     <section class="article-info">
-      <h1>Classes(or whatever idk)</h1>
+      <h1>Object Oriented Programming Concepts</h1>
       <div class="lessons-container">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque
-          adipisci, illum corporis libero nostrum fuga, cum debitis sint,
-          quisquam quae dicta! Iure nisi dolore perferendis eligendi vitae enim
-          quasi.
+          In Object-oriented programing (OOP), we organize our software around
+          data and objects. In Computer Science, an object can be a lot of
+          things: a variable or a data structure, to title a few. Tackling our
+          coding problems with an object-oriented approach can help make our
+          code more reusable, scalable, and efficient. We will now discuss the
+          basic building blocks of object-oriented coding. Above we listed some
+          forms that objects can take. Imagine for a moment some integer
+          variable ‘x’ that you define in your code. ‘X’ is an object. We use
+          the term ‘class’ to refer to an object’s type. Your variable ‘x’ is
+          within the integer class, and it is therefore an instance of the
+          integer class. Objects store our data, and, in the case of ‘x’, the
+          data stored is the specific integer value associated with the
+          variable.
+        </p>
+        <code class="language-java">int x = 4</code>
+        <p>
+          We create an integer variable, which is an object of the integer
+          class, and set its value to 4. There are many other types of
+          variables, such as strings, doubles, or characters, and, in any case,
+          the class of that variable is synonymous with its type. Let’s expand
+          our discussion to data structures. A data structure is a specialized
+          format for organizing, processing, retrieving and storing data. Our
+          code can make use of many data structures, such as arrays, which hold
+          a series of objects within a specific order. We will address arrays
+          further in our various explanations of sorting algorithms. An array is
+          a data structure, and therefore an object. When we define an array, we
+          are creating an instance of the array class.
+        </p>
+        <code class="language-java">int my_array[] = {1, 2, 3, 4}</code>
+        <p>
+          Here we make use of two classes, integer and array. Our array
+          organizes the data stored in the integers. Each object, the array and
+          every individual integer, has its own type, or class. We can even
+          define a class ourselves within our code, assigning it specific
+          variables that can be accessed and manipulated using methods. Suppose
+          we intended to use JavaScript to create our own class of objects to
+          help organize books within a library. ‘Book’ could be the title of our
+          class. It would need to store, at the minimum, the title of the book.
+        </p>
+        <pre><code class="language-java">public class Book {
+      private String title;
+    }</code></pre>
+        <p>
+          Here we outline the basic structure of Book objects that we will
+          create in the future. The only thing we care about is the book itself
+          and its title, which takes the form of a String variable. We need to
+          be able to manipulate our Book object. Say we wanted to change its
+          title or call the object to use that title in part of our code. To do
+          so, we need to add methods: code that allows instances of our class to
+          perform certain actions or tasks using their stored data. Let’s expand
+          our Book class with a single method, one that allows it to return the
+          title of the book to the user.
+        </p>
+        <pre><code class="language-java">public class Book {
+    private String title;
+    
+  // new method
+    public String getTitle() {
+      return title;
+    }
+  }</code></pre>
+        <p>
+          getTitle() now refers to our new method. Imagine we had an instance of
+          our Book class called “bookOne,” and its title was “The Very Hungry
+          Caterpillar.” We can tell bookOne to perform the action associated
+          with our new method. This process is known as calling. Note that in
+          the case described, title refers to the string variable stored within
+          the object, “The Very Hungry Caterpillar,” and the name refers to the
+          object itself, bookOne.
+        </p>
+        <pre><code class="language-java">String exampleString;
+exampleString = bookOne.getTitle();</code></pre>
+        <p>
+          Now our exampleString variable will store the string, “The Very Hungry
+          Caterpillar.” Methods are an essential piece of Object-oriented
+          programming. Whenever we define objects or classes within our code,
+          methods are our only way of manipulating them while our code is
+          executing. Let’s add an additional method that allows us to change the
+          Book’s title.
+        </p>
+        <pre><code class="language-java">public class Book {
+    private String title;
+    
+    public String getTitle() {
+      return title;
+    }
+    
+    // new method
+    public void setTitle(String newTitle) {
+      this.title = newTitle;
+    }
+  }</code></pre>
+        <p>
+          We’re using a new technique here: within our setTitle method, we have
+          a reference to ‘this.title.’ Whenever ‘this’ appears, it instructs the
+          object within this class to refer to itself. In this case, the
+          setTitle() method tells this instance of Book to refer to its current
+          title and replace it with the new title given by the method. One can
+          already see the benefits of Object-oriented design in our code before
+          the class is complete. There’s a special type of method that we need
+          to complete our Book class. In order for it to be useful to us in our
+          code, we need to be able to actually create new instances of the Book
+          class, otherwise there will be no data to manipulate. The type of
+          method that allows us to do this is called a constructor.
+        </p>
+        <pre><code class="language-java">public class Book {
+    private String title;
+    
+    // constructor 
+    public Book (String title) {
+      setTitle(title);
+  }
+  
+    public String getTitle() {
+      return title;
+    }
+    
+    public void setTitle(String newTitle) {
+      this.title = newTitle;
+    }
+  }</code></pre>
+        <p>
+          A constructor defines what variables the user needs to enter into the
+          object when it is created. These entries are called parameters. In our
+          case, the only parameter is a string that will be assigned as our
+          Book’s title. Now that we have a constructor, we can declare an
+          instance of our Book class within our code.
+        </p>
+        <code class="language-java">
+          Book bookTwo = newBook(“Horton Hears a Who”);
+        </code>
+        <p>
+          If this line of code is run, a new instance of Book will be created.
+          We can access its methods by calling it, as shown below.
+        </p>
+        <pre><code class="language-java">String exampleString;
+exampleString = bookTwo.getTitle();	
+; exampleString = “Horton Hears a Who”
+bookTwo.setTitle(“Where the Wild Things Are);
+; bookTwo.title = “Where the Wild Things Are”
+exampleString = bookTwo.getTitle 			
+; exampleString = “Where the Wild Things Are"</code></pre>
+        <p>
+          Additional methods, variables, Books, and other data structures can
+          all be defined to expand our basic library system. In fact, with
+          Object-oriented programming, our options are nearly limitless. You
+          hopefully now will have some familiarity with the concept itself and
+          its usefulness in solving challenges within the world of Computer
+          Science.
         </p>
 
         <h2>Information about the activity</h2>
@@ -73,4 +222,7 @@
       </div>
     </section>
   </body>
+  <script src="../../node_modules/prismjs/prism.js"></script>
+  <script src="../../node_modules/prismjs/components.js"></script>
+  <script src="../../node_modules/prismjs/components/prism-java.js"></script>
 </html>
