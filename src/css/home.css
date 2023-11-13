@@ -3,9 +3,6 @@ body {
   flex-direction: column;
 }
 
-.header-item {
-}
-
 .header-button {
   text-decoration: none;
   color: var(--bone);
@@ -56,6 +53,9 @@ nav ul li {
   margin: auto;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  clip-path: inset(5px round 5px);
 }
 
 .hero-text-container {
@@ -90,6 +90,11 @@ nav ul li {
   text-align: center;
 }
 
+.parent-list {
+  list-style: none;
+  text-align: center;
+}
+
 .lesson-nav-section {
   margin: auto;
 }
@@ -100,4 +105,28 @@ nav ul li {
 
 .sublist-item {
   list-style: none;
+  text-align: center;
+}
+
+.footer-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 50px;
+  background-color: var(--onyx-medium);
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-item {
+  display: inline;
+}
+
+#about-us {
+  color: var(--bone);
+  text-decoration: none;
+}
+
+#about-us:hover {
+  background-color: var(--bone);
+  color: var(--onyx-medium);
 }
