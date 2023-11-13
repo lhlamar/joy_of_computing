@@ -11,6 +11,17 @@ h2 {
   text-align: center;
 }
 
+strong {
+  text-decoration: underline;
+  color: var(--sexy-blue);
+}
+
+.lessons-container {
+  margin: 0 auto;
+  max-width: 76vw;
+  line-height: 1.5em;
+}
+
 .interactive-activity {
   outline: solid 2px var(--onyx-gray);
   height: 200px;
