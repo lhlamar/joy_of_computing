@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+strong {
+  color: var(--sexy-blue);
+}
+
 .header-list {
   list-style-type: none;
   margin: 0;

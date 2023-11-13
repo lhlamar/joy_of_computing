@@ -103,7 +103,12 @@ nav ul li {
   font-size: 1.5em;
 }
 
-.sublist-item {
+.sublist-item a {
   list-style: none;
   text-align: center;
+  color: var(--sexy-blue);
+}
+
+.sublist-item a:visited {
+  color: var(--sexy-blue-dark);
 }
