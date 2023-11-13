@@ -107,26 +107,3 @@ nav ul li {
   list-style: none;
   text-align: center;
 }
-
-.footer-container {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-top: 50px;
-  background-color: var(--onyx-medium);
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer-item {
-  display: inline;
-}
-
-#about-us {
-  color: var(--bone);
-  text-decoration: none;
-}
-
-#about-us:hover {
-  background-color: var(--bone);
-  color: var(--onyx-medium);
-}

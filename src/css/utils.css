@@ -8,19 +8,23 @@ body {
   margin-right: 50px;
 }
 
-ul {
+.header-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--wenge);
 }
 
-li {
+.header-list-item {
   float: left;
+  cursor: pointer;
 }
 
-li a,
+.dropbtn {
+  cursor: default;
+}
+
+.header-list-item a,
 .dropbtn {
   display: inline-block;
   color: var(--bone);
@@ -29,13 +33,13 @@ li a,
   text-decoration: none;
 }
 
-li a:hover,
+.header-list-item a:hover,
 .dropdown:hover .dropbtn {
   background-color: var(--bone);
   color: var(--wenge);
 }
 
-li.dropdown {
+.header-list-item.dropdown {
   display: inline-block;
 }
 
@@ -68,20 +72,22 @@ li.dropdown {
 
 /* footers css here */
 .footer-container {
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-top: 50px;
 
-  background-color: var(--onyx-medium);
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .footer-item {
-  display: inline;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 #about-us {

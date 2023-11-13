@@ -7,13 +7,17 @@ h1 {
   font-size: 2em;
 }
 
+h2 {
+  text-align: center;
+}
+
 .interactive-activity {
-  background-color: var(--onyx-gray);
-  height: 100px;
+  outline: solid 2px var(--onyx-gray);
+  height: 200px;
 }
 
 .visual-simulation {
   margin-top: 10px;
-  background-color: var(--onyx-gray);
-  height: 100px;
+  outline: solid 2px var(--onyx-gray);
+  height: 200px;
 }
