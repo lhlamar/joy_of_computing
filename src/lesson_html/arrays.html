@@ -52,6 +52,106 @@
           that an array can be made of up any type of object.
         </p>
 
+        <p>
+          picure here
+        </p>
+
+        <p>
+          The above example is a simple array. It stores six integer values: 2, 
+          4, 10, 5, 15, and 3. These values are organized by a specific ‘index’, 
+          which tells us what position that the value is stored relative to the 
+          other integers. The integer 2 corresponds to the index ‘0’, the integer 
+          4 corresponds to the index ‘1’, and so on. Take note that the first index 
+          in our array is not 1, but 0. In most coding languages, this will be the 
+          case. When working on any project, be sure to take note if your coding 
+          language is irregular in this way – some are. For JavaScript, which will 
+          be the language this discussion uses most frequently, the array index begins 
+          at 0. Let’s create the array demonstrated above in JavaScript.
+        </p>
+
+        <p>
+          first code thing
+        </p>
+
+        <p>
+          At the start of our statement, we declare the type of objects in the array. 
+          Keep in mind that all objects in the array must follow this same type. We could 
+          make an array of strings, doubles, chars, or even our own data structures, like 
+          the Book class we defined in the Concepts of OOP section of this instructional 
+          module. We need to name our array as well. Our array is simply named my_Array[]. 
+          Note the empty closed brackets in our statement. This is how our compiler knows 
+          that the object we’re creating is an array. Each individual integer within our 
+          array can be accessed as long as we know the index that the integer corresponds 
+          to. We call on each value in the array by placing the index of the object we’re 
+          seeking within the brackets of my_Array[].
+        </p>
+
+        <p>
+          second code thing
+        </p>
+
+        <p>
+          Although every object in our array needs to be of the same type, we can define our 
+          array carefully to allow storage of a wider range of objects. Instead of defining 
+          our array as an integer array, consider what it might look like to define our array 
+          as a series of variables instead:
+        </p>
+
+        <p>
+          third code thing
+        </p>
+
+        <p>
+          Now, though the first four indexes (which in JavaScript are indexes 0-3) are still 
+          integers, our values stored in indexes 4, 5, and 6 are a string, a Boolean, and null 
+          respectively. Using these types of arrays is slightly more challenging, but useful in 
+          rare circumstances. The central purpose that arrays serve in our program are to organize 
+          large quantities of objects, but we might want to manipulate our array in specific ways 
+          to keep our data organized by specific criteria. Not only can we call the values in our 
+          array out to other defined variables, we can also edit the values in the array after it 
+          has been defined. Let’s imagine that we wanted to set every value of our integer array 
+          my_Array[] to 0. The following code would perform this task.
+        </p>
+
+        <p>
+          fourth code thing
+        </p>
+
+        <p>
+          But we might notice that the process as defined here is inefficient, especially if we had 
+          an especially large array of integers. To improve this process, let’s consider the use of 
+          the JavaScript’s .length() method. Refer to the discussion on the Concepts of OOP section 
+          for more information on methods.
+        </p>
+
+        <p>
+          fifth code thing
+        </p>
+
+        <p>
+          Even though our indexes run 0-5, there are still six separate integers within my_Array[]. 
+          Because of this, my_Array.length() pulls a value of 6. Let’s use a while loop to make our 
+          code that sets each value in my_Array[] to 0 more efficient and scalable. To do this, we’ll 
+          need to define a new integer variable to track the indexes of the array as we edit them. 
+          Because we start at index 0, this variable will be initially defined as 0 and will be 
+          incremented by one each time we move on to the next index.
+        </p>
+
+        <p>
+          sixth code thing
+        </p>
+
+        <p>
+          Remember that my_Array.length() carries a value of 6. The index will move from 0, 1, 2, 3, 4, 
+          and 5, and when the index is incremented to 6, the while loop will stop, as each of our integers 
+          is set to 0. The distinction between the length of the array and the maximum index is important. 
+          Our code will fail if we attempt to replace the integer at index 6 with 0, as there is no integer 
+          at index 6. This is why we used a less than sign instead of a less than or equal to sign in our 
+          while loop. More information about the usefulness of arrays and a coder’s options in manipulating 
+          them are available for your perusal in the various array sorting methods described in this 
+          instructional module.
+        </p>
+
         <h2>Information about the activity</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
