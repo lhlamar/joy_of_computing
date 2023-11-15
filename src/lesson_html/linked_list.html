@@ -58,6 +58,10 @@
         </p>
 
         <img style="width: 100%" id="linked_list_img" src="/linked_list.png" />
+        <pre>
+          Ravikiran, A S. Representation of a Linked List. 19 Oct. 2023. SimpliLearn, https://www.simplilearn.com/tutorials
+              /data-structure-tutorial/linked-list-in-data-structure. Accessed 15 Nov. 2023. 
+        </pre>
 
         <div>
           <p>
@@ -145,15 +149,41 @@
             conventional way and more common, but we will use printList for now
             for the sake of readability.
           </p>
-          <pre><code class="language-java">// Method to print the linked list
-public void printList() {
-    Node current = head;
-    while (current != null) {
-        System.out.print(current.data + " ");
-        current = current.next;
-    }
-    System.out.println();
-}</code></pre>
+          <pre><code class="language-java">class LinkedList {
+            Node head;
+          
+            public LinkedList() {
+                this.head = null;
+            }
+          
+          
+            // Method to add a new node to the end of the linked list
+            public void append(int data) {
+                Node newNode = new Node(data);
+          
+                if (head == null) {
+                    head = newNode;
+                    return;
+                }
+          
+                Node last = head;
+                while (last.next != null) {
+                    last = last.next;
+                }
+          
+                last.next = newNode;
+            }
+            // Method to print the linked list
+                public void printList() {
+                    Node current = head;
+                    while (current != null) {
+                        System.out.print(current.data + " ");
+                        current = current.next;
+                    }
+                  System.out.println();
+            }
+          }</code></pre>
+          
         </div>
 
         <div>
@@ -163,28 +193,33 @@ public void printList() {
             ahead and write our main and test out our new class to make sure
             everything works the way it should.
           </p>
-          <pre><code class="language-java">public static void main(String[] args) {
-    LinkedList linkedList = new LinkedList();
+          <pre><code class="language-java">public class main {
+    public static void main(String[] args) {
+      LinkedList linkedList = new LinkedList();
 
-    // Adding elements to the linked list
-    linkedList.append(1);
-    linkedList.append(2);
-    linkedList.append(3);
+      // Adding elements to the linked list
+      linkedList.append(1);
+      linkedList.append(2);
+      linkedList.append(3);
 
-    // Printing the linked list
-    System.out.println("Linked List:");
-    linkedList.printList();
+      // Printing the linked list
+      System.out.println("Linked List:");
+      linkedList.printList();
+  }
 }</code></pre>
+<pre><code class="language-bash">//heres our output
+Linked List:
+1 2 3 </code></pre>
         </div>
-
-        <div>
-          <h1>references</h1>
-          <ul>
-            <li>
-              https://www.simplilearn.com/tutorials/data-structure-tutorial/linked-list-in-data-structure
-            </li>
-          </ul>
-        </div>
+        <h2>Why use linked lists?</h2>
+        <p>There are several reasons to use linked lists. The primary being that they are
+          dynamic, meaning adding and removing elements from them is fast and cost efficient 
+          on your cpu. For example, if you wanted to add an element to a linked list, all you have
+          to do is reassign some pointers, wheras if you need to add an element to an array, you have
+          to shift over the entire array, which is more resource intensive and not desireable if 
+          you have a list of data that is constantly having elements added and subtracted from it.
+        </p>
+        
 
         <h2>Information about the activity</h2>
         <p>
