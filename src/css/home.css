@@ -14,34 +14,19 @@ body {
   padding: 5px;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-}
-
 ul {
   margin: 0px;
   padding: 0px;
 }
 
-li {
+.parent-list li {
   padding: 7px;
   padding-left: 10px;
   padding-right: 20px;
 }
 
-nav ul li {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.nav-container {
-  margin-bottom: 50px;
+.header-list {
+  margin-bottom: 25px !important;
 }
 
 .hero-container {
@@ -49,7 +34,7 @@ nav ul li {
   width: 80vw;
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
+
   margin: auto;
   padding-top: 15px;
   padding-bottom: 15px;
