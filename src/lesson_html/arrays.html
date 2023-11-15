@@ -110,7 +110,7 @@ exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
           instead:
         </p>
 
-        <p>third code thing</p>
+        <code class="language-java">var my_Second_Array[] = {1, 2, 3, 4, “Hello”, True, null}</code>
 
         <p>
           Now, though the first four indexes (which in JavaScript are indexes
@@ -127,7 +127,14 @@ exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
           task.
         </p>
 
-        <p>fourth code thing</p>
+        <pre><code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};
+int exampleInt;
+int my_Array[1] = 0;				; index 1 is set to 0
+int my_Array[2] = 0;				; index 2 is set to 0
+int my_Array[3] = 0;				; index 3 is set to 0
+int my_Array[4] = 0;				; index 4 is set to 0
+int my_Array[5] = 0;				; index 5 is set to 0
+int my_Array[6] = 0;				; index 6 is set to 0</code></pre>
 
         <p>
           But we might notice that the process as defined here is inefficient,
@@ -137,7 +144,8 @@ exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
           more information on methods.
         </p>
 
-        <p>fifth code thing</p>
+        <pre><code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};
+int exampleInt = myArray.length();		; exampleInt = 6</code></pre>
 
         <p>
           Even though our indexes run 0-5, there are still six separate integers
@@ -150,7 +158,12 @@ exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
           move on to the next index.
         </p>
 
-        <p>sixth code thing</p>
+        <pre><code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};
+int index = 0;
+while (index &lt; my_Array.length() ) {
+  my_Array[index] = 0;
+  index++;
+}</code></pre>
 
         <p>
           Remember that my_Array.length() carries a value of 6. The index will
