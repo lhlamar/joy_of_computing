@@ -11,17 +11,33 @@
   </head>
   <body>
     <!-- nav bar  -->
-    <section class="nav-bar-section">
-      <nav class="nav-container">
-        <ul class="nav-container">
-          <li><a class="header-item">Home</a></li>
-          <li>
-            <a id="how-to-use-button" class="header-item header-button" href="#"
-              >How to use</a
-            >
+    <section class="nav-menu">
+      <ul class="header-list">
+        <li class="header-list-item" id="header-list-item-home"><a>Home</a></li>
+        <div class="float-right">
+          <li class="header-list-item dropdown">
+            <a class="dropbtn">Object Oriented Programming</a>
+            <div class="dropdown-content">
+              <a href="./src/lesson_html/conepts_of_OOP.html">Concepts of OOP</a>
+            </div>
           </li>
-        </ul>
-      </nav>
+          <li class="header-list-item dropdown">
+            <a class="dropbtn">Sorting Algorithms</a>
+            <div class="dropdown-content">
+              <a href="./src/lesson_html/selsort.html">Selection Sort</a>
+              <a href="./src/lesson_html/countsort.html">Coutning Sort</a>
+              <a href="./src/lesson_html/mergesort.html">Merge Sort</a>
+            </div>
+          </li>
+          <li class="header-list-item dropdown">
+            <a class="dropbtn">Data Structures</a>
+            <div class="dropdown-content">
+              <a href="./src/lesson_html/arrays.html">Arrays</a>
+              <a href="./src/lesson_html/linked_list.html">Linked Lists</a>
+            </div>
+          </li>
+        </div>
+      </ul>
     </section>
     <!-- end nav bar here -->
     <!-- begin hero section -->
@@ -33,7 +49,7 @@
           Our project includes a great way for new computer science students to 
           move through some <strong>fun and interactive</strong> lessons and learn some essential computer science concepts.
           For a much more detailed readme(as we computer science people call it), check
-          out the link at the bottom of the page <strong>'about</strong>
+          out the link at the bottom of the page <strong>'about us'</strong>
         </p>
       </div>
       <div class="hero-img-container">
