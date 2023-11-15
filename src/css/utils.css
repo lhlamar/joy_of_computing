@@ -1,3 +1,4 @@
+/* drop down menu css here */
 body {
   margin: 0;
 }
@@ -6,7 +7,6 @@ strong {
   color: var(--sexy-blue);
 }
 
-/* drop down menu css here */
 .header-list {
   list-style-type: none;
   margin: 0;
@@ -15,15 +15,8 @@ strong {
 }
 
 .header-list-item {
-  cursor: pointer;
-}
-
-#header-list-item-home {
   float: left;
-}
-
-.float-right {
-  float: right;
+  cursor: pointer;
 }
 
 .dropbtn {
