@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../css/colors.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <link rel="stylesheet" href="../css/utils.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/prismjs/themes/prism-tomorrow.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concepts of Object-Oriented Programming</title>
   </head>
@@ -47,10 +51,70 @@
       <h1>Sorting Algorithms - Merge Sort</h1>
       <div class="lessons-container">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque
-          adipisci, illum corporis libero nostrum fuga, cum debitis sint,
-          quisquam quae dicta! Iure nisi dolore perferendis eligendi vitae enim
-          quasi.
+          Merge sort is one of three processes we will examine in this
+          instructional module to help us modify and organize our arrays for
+          more convenient reference, along with selection sort and counting
+          sort. If selection sort could be considered the least difficult of the
+          three, and counting sort the most difficult, then merge sort might be
+          called a middle level of difficulty for the sorting methods presented
+          in this instructional module. Consider the following array:
+        </p>
+
+        <code class="language-java">int my_Array[] = {70, 50, 30, 10, 20, 40, 60}</code>
+
+        <p>
+          Let’s imagine we wanted to sort the values in this array in order from
+          least to greatest. Merge sort offers one solution. It proposes that we
+          recursively separate our array in two until we have a collection of
+          single value arrays with a size equal to the length of the original
+          array. In this first step, we separate our seven-value array into two.
+          However, because we cannot have an array of length three and a half,
+          we will instead create one array of length four and another of length
+          three, like so:
+        </p>
+
+        <img src="/MerS_1.png" alt="first split" />
+
+        <pre>
+          Pankaj. Merge Sort Algorithm - Java, C, and Python Implementation. 3 Aug. 2022. Digital Ocean, 
+          https://www.digitalocean.com/community/tutorials/merge-sort-algorithm-java-c-python. Accessed 
+          16 Nov. 2023. d: 16 November 2023). 
+        </pre>
+
+        <p>
+          Our next step is to repeat this process for each of our two new
+          arrays.
+        </p>
+
+        <img src="/MerS_2.png" alt="second split" />
+
+        <p>
+          Then, with one final separation, we reach our target state: a
+          collection of seven arrays of length one.
+        </p>
+
+        <img src="/MerS_3.png" alt="third split" />
+
+        <p>
+          We were able to complete this process by separating all of our arrays
+          three times, however, many more steps might be necessary to reach this
+          initial target state if the array being sorted is significantly
+          larger. Our next step is to begin reassembling our small, disparate
+          arrays in a sorted fashion. In each progressive assembly step, the
+          small arrays are organized from least to greatest, as seen below:
+        </p>
+
+        <img src="/MerS_4.png" alt="humpty dumpty back together" />
+
+        <p>
+          Note that the number of steps required to join these arrays back into
+          a sorted version of the original form is the same number of steps as
+          it took to disassemble the original array in the previous section.
+          Merge sort is simple, and can easily sort arrays with very large
+          numbers, unlike counting sort. However, the length of time that a
+          computer takes to apply this process over a very long array is
+          significant. Consider the size of your array before making use of
+          merge sort.
         </p>
 
         <h2>Information about the activity</h2>
@@ -78,4 +142,7 @@
       </div>
     </section>
   </body>
+  <script src="../../node_modules/prismjs/prism.js"></script>
+  <script src="../../node_modules/prismjs/components.js"></script>
+  <script src="../../node_modules/prismjs/components/prism-java.js"></script>
 </html>
