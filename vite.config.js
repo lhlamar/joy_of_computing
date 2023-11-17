@@ -16,7 +16,7 @@ export default defineConfig({
         linked_list: resolve(__dirname, "src/lesson_html/linked_list.html"),
         mergesort: resolve(__dirname, "src/lesson_html/mergesort.html"),
         selsort: resolve(__dirname, "src/lesson_html/selsort.html"),
-        about_us: resolve(__dirname, "src/lesson_html/about_us.html"),
+        about_us: resolve(__dirname, "src/other_html/about_us.html"),
       },
     },
   },
