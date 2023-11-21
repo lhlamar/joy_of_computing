@@ -47,84 +47,130 @@
       <h1>Sorting Algorithms - Counting Sort</h1>
       <div class="lessons-container">
         <p>
-          Counting sort is one of three processes we will examine in this instructional module to help us modify and organize our arrays for more convenient reference, along with selection sort and merge sort. Counting sort is the most challenging of the three sorting methods we will discuss in this module. Like the alternative sorting methods presented, it helps us organize an array of integer values in order from least to greatest. Let’s imagine the case of the following nine integer array:
+          Counting sort is one of three processes we will examine in this
+          instructional module to help us modify and organize our arrays for
+          more convenient reference, along with selection sort and merge sort.
+          Counting sort is the most challenging of the three sorting methods we
+          will discuss in this module. Like the alternative sorting methods
+          presented, it helps us organize an array of integer values in order
+          from least to greatest. Let’s imagine the case of the following nine
+          integer array:
         </p>
 
-        <code class="language-java">int my_Array[] = {8, 3, 5, 1, 3, 8, 6, 4, 3}</code>
+        <code class="language-java"
+          >int my_Array[] = {8, 3, 5, 1, 3, 8, 6, 4, 3}</code
+        >
 
         <p>
-          Recall briefly the difference between the term ‘index’ and the term ‘value,’ a distinction that will be essential in our explanation of counting sort. Index describes a specific position in the array. The first position is index 0, the second index 1, and so on. Refer to our informational section on the properties of arrays for additional help. The value of a given index is the number that is located at that position. So, the value of index 0 is 8, the value of index 1 is 3, and so on.
+          Recall briefly the difference between the term ‘index’ and the term
+          ‘value,’ a distinction that will be essential in our explanation of
+          counting sort. Index describes a specific position in the array. The
+          first position is index 0, the second index 1, and so on. Refer to our
+          informational section on the properties of arrays for additional help.
+          The value of a given index is the number that is located at that
+          position. So, the value of index 0 is 8, the value of index 1 is 3,
+          and so on.
         </p>
 
         <p>
-          The first step in the process of counting sort is to create a new array with a length of one more than the highest value in our original array. Looking at my_Array, the highest value is 8, and that means that our new array will be of length 9. Set the value of each index in the array to 0.
+          The first step in the process of counting sort is to create a new
+          array with a length of one more than the highest value in our original
+          array. Looking at my_Array, the highest value is 8, and that means
+          that our new array will be of length 9. Set the value of each index in
+          the array to 0.
         </p>
 
-        <img src="/CountS_1.png" alt="picture of an array">
+        <img src="/CountS_1.png" alt="picture of an array" />
 
         <p>
-          In counting sort, it will be relevant to know the amount of indexes in our original array that share a specific value. Three indexes store a 3, two indexes store an 8. 1, 4, 5, and 6 each have only one index storing them. Let’s assemble this information into our new array, called middle_Array, so that the value at each position represents the amount of times the index appears in our original array.
+          In counting sort, it will be relevant to know the amount of indexes in
+          our original array that share a specific value. Three indexes store a
+          3, two indexes store an 8. 1, 4, 5, and 6 each have only one index
+          storing them. Let’s assemble this information into our new array,
+          called middle_Array, so that the value at each position represents the
+          amount of times the index appears in our original array.
         </p>
 
-        <img src="/CountS_2.png" alt="picture of an array">
+        <img src="/CountS_2.png" alt="picture of an array" />
 
         <p>
-          Because there are three 3’s in our original array, index 3 has a value of 3. Because there are two 8’s in our original array, index 8 has a value of 2. Many of the indexes listed in our middle_Array do not appear as values in our original array, so they store a value of 0.
+          Because there are three 3’s in our original array, index 3 has a value
+          of 3. Because there are two 8’s in our original array, index 8 has a
+          value of 2. Many of the indexes listed in our middle_Array do not
+          appear as values in our original array, so they store a value of 0.
         </p>
 
         <p>
-          The next step is an adjustment to middle_Array. We’ll move through every position in the array and add the value at the position immediately to its left to it. On index 0, we have nothing to add. On index 1, we add zero, which will not change the result. However, on index 2, we can add the 1 value stored in index 1, bringing the value of index 2 to 1. Once we reach index 3, we add this value of 1 to it, increasing it to four. This process continued until we have reached the end of the array.
+          The next step is an adjustment to middle_Array. We’ll move through
+          every position in the array and add the value at the position
+          immediately to its left to it. On index 0, we have nothing to add. On
+          index 1, we add zero, which will not change the result. However, on
+          index 2, we can add the 1 value stored in index 1, bringing the value
+          of index 2 to 1. Once we reach index 3, we add this value of 1 to it,
+          increasing it to four. This process continued until we have reached
+          the end of the array.
         </p>
 
-        <img src="/CountS_3.png" alt="picture of an array">
+        <img src="/CountS_3.png" alt="picture of an array" />
 
         <p>
-          The process is complete after you add the value of index 8 into index 9, resulting in the following array:
+          The process is complete after you add the value of index 8 into index
+          9, resulting in the following array:
         </p>
 
-        <img src="/CountS_4.png" alt="picture of an array">
+        <img src="/CountS_4.png" alt="picture of an array" />
 
         <p>
-          Remember that my_Array, our original array, has the following arrangement:
+          Remember that my_Array, our original array, has the following
+          arrangement:
         </p>
 
-        <img src="/CountS_5.png" alt="picture of an array">
+        <img src="/CountS_5.png" alt="picture of an array" />
 
         <p>
-          Our next step will be to create one final empty array of the same size as our original array. This will soon be our sorted array.
+          Our next step will be to create one final empty array of the same size
+          as our original array. This will soon be our sorted array.
         </p>
 
-        <img src="/CountS_6.png">
+        <img src="/CountS_6.png" />
 
         <p>
-          Let’s begin a process that will turn our final, empty array into a sorted version of my_Array. Go to the first index of my_Array and find the value within it. 8, in our case. Take this value, store it, and go to the index of the same number on the middle array. We’ve stored 8. We go to index 8 at middle array, storing the value 9. We subtract 1 from this value, changing it from 9 to 8.
+          Let’s begin a process that will turn our final, empty array into a
+          sorted version of my_Array. Go to the first index of my_Array and find
+          the value within it. 8, in our case. Take this value, store it, and go
+          to the index of the same number on the middle array. We’ve stored 8.
+          We go to index 8 at middle array, storing the value 9. We subtract 1
+          from this value, changing it from 9 to 8.
         </p>
 
-        <img src="/CountS_7.png">
+        <img src="/CountS_7.png" />
 
         <p>
-          Now, find that stored value, which is both the value at the first index of my_Array and the index of the value you subtracted one from in the middle array, 8, in our case. Place the new value in the middle array, the one you just adjusted by subtracting one, in the final array at the index of the stored value. We’re placing our new value, 8, at the index of our stored value, which is also 8.
+          Now, find that stored value, which is both the value at the first
+          index of my_Array and the index of the value you subtracted one from
+          in the middle array, 8, in our case. Place the new value in the middle
+          array, the one you just adjusted by subtracting one, in the final
+          array at the index of the stored value. We’re placing our new value,
+          8, at the index of our stored value, which is also 8.
         </p>
 
-        <img src="/CountS_8.png">
+        <img src="/CountS_8.png" />
+
+        <p>Here’s one extra step for further demonstration.</p>
+
+        <img src="/CountS_9.png" />
+
+        <p>And one more, because counting sort is confusing.</p>
+
+        <img src="/CountS_10.png" />
 
         <p>
-          Here’s one extra step for further demonstration.
+          At the end of this process, your final sorted array should have all of
+          the values in your original array sorted correctly. Try it at home to
+          ensure that you understand the process.
         </p>
 
-        <img src="/CountS_9.png">
-
-        <p>
-          And one more, because counting sort is confusing.
-        </p>
-
-        <img src="/CountS_10.png">
-
-        <p>
-          At the end of this process, your final sorted array should have all of the values in your original array sorted correctly. Try it at home to ensure that you understand the process.
-        </p>
-
-        <img src="/CountS_11.png">
+        <img src="/CountS_11.png" />
 
         <h2>Information about the activity</h2>
         <p>
