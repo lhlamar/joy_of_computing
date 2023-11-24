@@ -56,7 +56,7 @@
           in this instructional module. Consider the following array:
         </p>
 
-        <code class="language-java">int my_Array[] = {70, 50, 30, 10, 20, 40, 60}</code>
+        <code class="language-java">int my_Array[] = {70, 50, 30, 10, 20, 40, 60};</code>
 
         <p>
           Let’s imagine we wanted to sort the values in this array in order from
@@ -113,15 +113,72 @@
           merge sort.
         </p>
 
-        <h2>Information about the activity</h2>
+        <h2>Interactive Activity</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
-          consequuntur repellendus voluptas ipsam rerum iste officia asperiores
-          aliquam magnam fugiat a animi pariatur aut, in rem excepturi esse
-          neque.
+          For this activity, let's pretend we are working on writing a merge sort 
+          algorithm in JavaScript. Fill in the blank with the correct line of code to 
+          complete the merge() function. If you get confused, look back to the lesson 
+          for hints on how the algorithm merges the two arrays back together!
         </p>
         <div class="interactive-activity">
-          <h1>interactive activity goes here</h1>
+            <pre><code class="language-java">// these parameters are passed in from other parts of the code
+void merge(array[], left, midpoint, right) {
+  // the two array halves that we are merging together are called L and R
+  // to make things simpler, we will omit the code for declaring and filling L and R
+  // the size of L is represented by the variable n1, and R by n2
+
+  var i = 0;
+  var j = 0;
+  var k = left;
+
+  while (i &lt; n1 && j &lt; n2) { //we are iterating through each element in both L and R
+    if (______________) { // how do we compare the values of L and R? fill in this line
+      array[k] = L[i];
+      i++;
+    }
+    else {
+      array[k] = R[j];
+      j++;
+    }
+    k++;
+  }
+
+  // if L and R aren't the same size, here we will clean up
+  // and copy over any remaining elements from L or R
+  while (i &lt; n1) {
+      arr[k] = L[i];
+      i++;
+      k++;
+  }
+
+  while (j &lt; n2) {
+      arr[k] = R[j];
+      j++;
+      k++;
+  }
+}
+            </code></pre>
+          <form>
+            <label>Type your answer in the box below and click the submit button. Don't forget the semicolon!</label><br>
+            <input type="text" id="mergesort" name="blank"><br>
+            <input type="button" value="Submit" onclick="validate(blank.value)">
+          </form>
+          
+          <p id="merge sort answer"></p>
+
+          <script>
+            var validate = function(answer)
+            {
+                if (answer == 'L[i] <= R[j];' || answer == 'R[j] > L[i];')
+                {
+                  document.getElementById("merge sort answer").innerHTML = "Correct!<br>The comparison checks if R[j] is the larger value of the two, and places the next element into the new merged array accordingly.";
+                }
+                else 
+                {
+                  document.getElementById("merge sort answer").innerHTML = "Incorrect!<br>The comparison should check if one of the values is larger than the other. But what would happen if they were the same?<br>Feel free to try again!";
+                }
+            };
+          </script>
         </div>
         <div class="visual-simulation">
           <h1>visual sim goes here</h1>

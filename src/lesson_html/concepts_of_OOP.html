@@ -61,7 +61,7 @@
           the data stored is the specific integer value associated with the
           variable.
         </p>
-        <code class="language-java">int x = 4</code>
+        <code class="language-java">int x = 4;</code>
         <p>
           We create an integer variable, which is an object of the integer
           class, and set its value to 4. There are many other types of
@@ -75,7 +75,7 @@
           a data structure, and therefore an object. When we define an array, we
           are creating an instance of the array class.
         </p>
-        <code class="language-java">int my_Array[] = {1, 2, 3, 4}</code>
+        <code class="language-java">int my_Array[] = {1, 2, 3, 4};</code>
         <p>
           Here we make use of two classes, integer and array. Our array
           organizes the data stored in the integers. Each object, the array and
@@ -184,11 +184,11 @@ exampleString = bookOne.getTitle();</code></pre>
         </p>
         <pre><code class="language-java">String exampleString;
 exampleString = bookTwo.getTitle();	
-; exampleString = “Horton Hears a Who”
+exampleString = “Horton Hears a Who”;
 bookTwo.setTitle(“Where the Wild Things Are);
-; bookTwo.title = “Where the Wild Things Are”
-exampleString = bookTwo.getTitle 			
-; exampleString = “Where the Wild Things Are"</code></pre>
+bookTwo.title = “Where the Wild Things Are”;
+exampleString = bookTwo.getTitle;
+exampleString = “Where the Wild Things Are"</code></pre>
         <p>
           Additional methods, variables, Books, and other data structures can
           all be defined to expand our basic library system. In fact, with
@@ -198,15 +198,71 @@ exampleString = bookTwo.getTitle
           Science.
         </p>
 
-        <h2>Information about the activity</h2>
+        <h2>Interactive Activity</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
-          consequuntur repellendus voluptas ipsam rerum iste officia asperiores
-          aliquam magnam fugiat a animi pariatur aut, in rem excepturi esse
-          neque.
+          This quiz is meant to test what you learned from the lecture 
+          section. Select the correct answer from the choices provided, and try not to 
+          look back to the lesson for answers.
         </p>
         <div class="interactive-activity">
-          <h1>interactive activity goes here</h1>
+          <form>
+          <label>Which is a valid way to instantiate an object?</label><br>
+            <input type="radio" name="q1" value="A">
+            <label>Date today; today = new Date(2001, 9, 11);</label><br>
+
+            <input type="radio" name="q1" value="B">
+            <label>Book("Lord of the Rings");</label><br>
+
+            <input type="radio" name="q1" value="C">
+            <label>Both are valid</label><br>
+
+            <input type="button" value="Submit" onclick="validate(q1.value,'A', 'OOP answer 1')">
+          </form>
+          <p id = "OOP answer 1"></p>
+          
+          <pre><code class="language-java">
+// let's say the the Book class has a variable that tracks which page is currently being read.
+// it can be altered with setPage(int x) and printed with getPage()
+Book book = new Book();
+for (int i = 1; i &lt; 50; i++) {  // this for loop is set to repeat 50 times, 
+                                   // counting using a variable called "i"
+  book.setPage(i);
+}
+book.getPage();
+          </code></pre>
+
+          <form>
+          <label>After the above code finishes, what will be the value returned by getPage()? </label><br>
+            <input type="radio" name="OOPq2" value="A">
+            <label>100</label><br>
+
+            <input type="radio" name="OOPq2" value="B">
+            <label>50</label><br>
+
+            <input type="radio" name="OOPq2" value="C">
+            <label>1</label><br>
+
+            <input type="radio" name="OOPq2" value="D">
+            <label>I'm not sure...</label><br>
+
+            <input type="button" value="Submit" onclick="validate(OOPq2.value,'B', 'OOP answer 2')">
+          </form>
+          <p id = "OOP answer 2"></p>
+
+          <script>
+            var validate = function(answer, correctAnswer, confirmation)
+            {
+                if (answer == correctAnswer)
+                {
+                  document.getElementById(confirmation).innerHTML = "Correct!";
+                }
+                else 
+                {
+                  document.getElementById(confirmation).innerHTML = "Incorrect, try again.";
+                }
+            };
+          </script>
+
         </div>
         <div class="visual-simulation">
           <h1>visual sim goes here</h1>

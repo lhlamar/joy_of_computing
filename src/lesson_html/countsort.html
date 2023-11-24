@@ -50,7 +50,7 @@
           Counting sort is one of three processes we will examine in this instructional module to help us modify and organize our arrays for more convenient reference, along with selection sort and merge sort. Counting sort is the most challenging of the three sorting methods we will discuss in this module. Like the alternative sorting methods presented, it helps us organize an array of integer values in order from least to greatest. Let’s imagine the case of the following nine integer array:
         </p>
 
-        <code class="language-java">int my_Array[] = {8, 3, 5, 1, 3, 8, 6, 4, 3}</code>
+        <code class="language-java">int my_Array[] = {8, 3, 5, 1, 3, 8, 6, 4, 3};</code>
 
         <p>
           Recall briefly the difference between the term ‘index’ and the term ‘value,’ a distinction that will be essential in our explanation of counting sort. Index describes a specific position in the array. The first position is index 0, the second index 1, and so on. Refer to our informational section on the properties of arrays for additional help. The value of a given index is the number that is located at that position. So, the value of index 0 is 8, the value of index 1 is 3, and so on.
@@ -126,15 +126,46 @@
 
         <img src="/CountS_11.png">
 
-        <h2>Information about the activity</h2>
+        <h2>Interactive Activity</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
-          consequuntur repellendus voluptas ipsam rerum iste officia asperiores
-          aliquam magnam fugiat a animi pariatur aut, in rem excepturi esse
-          neque.
+          This quiz directly references the lesson material, so looking back is encouraged.
         </p>
         <div class="interactive-activity">
-          <h1>interactive activity goes here</h1>
+          <form>
+            <label>In the final image, why does each new 3 get filled in to the left of the previously added one?</label><br>
+              <input type="radio" name="q1" value="A">
+              <label>After one of each number is sorted, a calculation is performed to determine how many empty spaces are available to the left for the 3s to fill</label><br>
+  
+              <input type="radio" name="q1" value="B">
+              <label>The graphic is wrong, it should acutally fill in elements to the right of the previous one</label><br>
+  
+              <input type="radio" name="q1" value="C">
+              <label>The index in the middle array decrements by 1 each time it places a new element in the sorted array</label><br>
+  
+              <input type="radio" name="q1" value="D">
+              <label>Counting sort was invented by wizards to spite and confuse me</label><br>
+  
+              <input type="button" value="Submit" onclick="validate(q1.value, 'OOP answer 1')">
+            </form>
+            <p id = "OOP answer 1"></p>
+  
+            <script>
+              var validate = function(answer, confirmation)
+              {
+                  if (answer == 'C')
+                  {
+                    document.getElementById(confirmation).innerHTML = "Correct!";
+                  }
+                  else if (answer == 'D')
+                  {
+                    document.getElementById(confirmation).innerHTML = "Close, but no cigar. Try again.";
+                  }
+                  else 
+                  {
+                    document.getElementById(confirmation).innerHTML = "Incorrect, try again.";
+                  }
+              };
+            </script>
         </div>
         <div class="visual-simulation">
           <h1>visual sim goes here</h1>

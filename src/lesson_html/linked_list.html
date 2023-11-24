@@ -203,7 +203,7 @@
       linkedList.printList();
   }
 }</code></pre>
-<pre><code class="language-bash">//heres our output
+<pre><code class="language-bash">//here's our output
 Linked List:
 1 2 3 </code></pre>
         </div>
@@ -217,15 +217,66 @@ Linked List:
         </p>
         
 
-        <h2>Information about the activity</h2>
+        <h2>Infteractive Activity</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
-          consequuntur repellendus voluptas ipsam rerum iste officia asperiores
-          aliquam magnam fugiat a animi pariatur aut, in rem excepturi esse
-          neque.
+          Let's pretend that we want to improve our linked list and add the 
+          capability to add and delete nodes in the middle of it. We have figured 
+          out how to iterate over the list and check if we are inserting/deleting 
+          in the right place, but now we need to actually change the list. 
+        </p>
+        <p>
+          To add a node into the middle of the list, we first iterate through 
+          the list with a placeholder "pointer" node, which functions much like 
+          the pointer nodes "head" and "last". The pointer will stop iterating 
+          at the node before where the new node will be inserted.
+        </p>
+        <p>
+          Once we find the right place, we will need to link the new node to 
+          the node that will come after it in the list, then to the node that comes 
+          before it. Using this same kind of logic, can you complete the method for 
+          deleting a node from the list while keeping the links intact?<br>Hint: drawing out 
+          the steps might help.
         </p>
         <div class="interactive-activity">
-          <h1>interactive activity goes here</h1>
+          <pre><code class="language-java">void add(data) {
+  Node insert = new Node(data);
+  ... // we find the place where the node should be inserted
+
+  insert.next = pointer.next;
+  pointer.next = insert;
+}
+            </code></pre>
+
+            <pre><code class="language-java">void remove(data) {
+  ... // we find which node should be removed
+  // as usual, pointer ends up pointing to the node immediately prior to the one we are removing
+
+  pointer.next = __________;    //complete this line
+  // now, since we can no longer access the node we want to remove,
+  // the Java garbage collector will automatically delete it for us!
+}
+            </code></pre>
+          <form>
+            <label>Type your answer in the box below and click the submit button.</label><br>
+            <input type="text" name="blank"><br>
+            <input type="button" value="Submit" onclick="validate(blank.value)">
+          </form>
+          
+          <p id="linked list answer"></p>
+
+          <script>
+            var validate = function(answer)
+            {
+                if (answer == 'pointer.next.next')
+                {
+                  document.getElementById("linked list answer").innerHTML = "Correct!<br>The important part is keeping the list connected by linking pointer to the Node after the one we are removing.";
+                }
+                else 
+                {
+                  document.getElementById("linked list answer").innerHTML = "Incorrect!<br>Hint: pointer.next is a Node and has the same functionality as any other Node.";
+                }
+            };
+          </script>
         </div>
         <div class="visual-simulation">
           <h1>visual sim goes here</h1>

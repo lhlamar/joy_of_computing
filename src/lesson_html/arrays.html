@@ -80,7 +80,7 @@
           demonstrated above in JavaScript.
         </p>
 
-        <code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3}</code>
+        <code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};</code>
 
         <p>
           At the start of our statement, we declare the type of objects in the
@@ -99,9 +99,9 @@
 
         <pre><code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};
 int exampleInt;
-exampleInt = my_Array[0];		; exampleInt = 2
-exampleInt = my_Array[1];		; exampleInt = 4
-exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
+exampleInt = my_Array[0];		// exampleInt = 2
+exampleInt = my_Array[1];		// exampleInt = 4
+exampleInt = my_Array[3];		// exampleInt = 10</code></pre>
 
         <p>
           Although every object in our array needs to be of the same type, we
@@ -111,7 +111,7 @@ exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
           instead:
         </p>
 
-        <code class="language-java">var my_Second_Array[] = {1, 2, 3, 4, “Hello”, True, null}</code>
+        <code class="language-java">var my_Second_Array[] = {1, 2, 3, 4, “Hello”, True, null};</code>
 
         <p>
           Now, though the first four indexes (which in JavaScript are indexes
@@ -130,12 +130,12 @@ exampleInt = my_Array[3];		; exampleInt = 10</code></pre>
 
         <pre><code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};
 int exampleInt;
-int my_Array[1] = 0;				; index 1 is set to 0
-int my_Array[2] = 0;				; index 2 is set to 0
-int my_Array[3] = 0;				; index 3 is set to 0
-int my_Array[4] = 0;				; index 4 is set to 0
-int my_Array[5] = 0;				; index 5 is set to 0
-int my_Array[6] = 0;				; index 6 is set to 0</code></pre>
+int my_Array[1] = 0;				// index 1 is set to 0
+int my_Array[2] = 0;				// index 2 is set to 0
+int my_Array[3] = 0;				// index 3 is set to 0
+int my_Array[4] = 0;				// index 4 is set to 0
+int my_Array[5] = 0;				// index 5 is set to 0
+int my_Array[6] = 0;				// index 6 is set to 0</code></pre>
 
         <p>
           But we might notice that the process as defined here is inefficient,
@@ -146,7 +146,7 @@ int my_Array[6] = 0;				; index 6 is set to 0</code></pre>
         </p>
 
         <pre><code class="language-java">int my_Array[] = {2, 4, 10, 5, 15, 3};
-int exampleInt = myArray.length();		; exampleInt = 6</code></pre>
+int exampleInt = myArray.length();		// exampleInt = 6</code></pre>
 
         <p>
           Even though our indexes run 0-5, there are still six separate integers
@@ -179,15 +179,80 @@ while (index &lt; my_Array.length() ) {
           various array sorting methods described in this instructional module.
         </p>
 
-        <h2>Information about the activity</h2>
+        <h2>Interactive Activity</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
-          consequuntur repellendus voluptas ipsam rerum iste officia asperiores
-          aliquam magnam fugiat a animi pariatur aut, in rem excepturi esse
-          neque.
+          This quiz is meant to test what you learned from the lecture 
+          section. Select the correct answer from the choices provided, and try not to 
+          look back to the lesson for answers.
         </p>
         <div class="interactive-activity">
-          <h1>interactive activity goes here</h1>
+          <form>
+            <label>For the array <code>int A[] = {5, 2, 3, 4, 9}</code>, what code would access the nth element of A?</label><br>
+              <input type="radio" name="arrayq1" value="A">
+              <label>A.n()</label><br>
+  
+              <input type="radio" name="arrayq1" value="B">
+              <label>A[n]</label><br>
+  
+              <input type="radio" name="arrayq1" value="C">
+              <label>A.size(n)</label><br>
+  
+              <input type="radio" name="arrayq1" value="D">
+              <label>for (int n : A)</label><br>
+  
+              <input type="button" value="Submit" onclick="validate(arrayq1.value,'B', 'array answer 1')">
+            </form>
+            <p id = "array answer 1"></p>
+            
+            <form>
+            <label>Using the same array <code>A</code> from the previous question, what is the value of <code>A[4]</code>? Remember that array indices are numbered from 0.</label><br>
+              <input type="radio" name="arrayq2" value="A">
+              <label>4</label><br>
+  
+              <input type="radio" name="arrayq2" value="B">
+              <label>2</label><br>
+  
+              <input type="radio" name="arrayq2" value="C">
+              <label>9</label><br>
+  
+              <input type="radio" name="arrayq2" value="D">
+              <label>3</label><br>
+  
+              <input type="button" value="Submit" onclick="validate(arrayq2.value,'C', 'array answer 2')">
+            </form>
+            <p id = "array answer 2"></p>
+
+            <form>
+              <label>What is a valid way to iterate through the elements of <code>A</code>?</label><br>
+                <input type="radio" name="arrayq3" value="A">
+                <label>for (int i = 0; i &lt; A.length(); i++)</label><br>
+    
+                <input type="radio" name="arrayq3" value="B">
+                <label>for (int i : A)</label><br>
+    
+                <input type="radio" name="arrayq3" value="C">
+                <label>int i = 0;  while (i &lt; A.length())</label><br>
+    
+                <input type="radio" name="arrayq3" value="D">
+                <label>All of the above</label><br>
+    
+                <input type="button" value="Submit" onclick="validate(arrayq3.value,'D', 'array answer 3')">
+              </form>
+              <p id = "array answer 3"></p>
+  
+            <script>
+              var validate = function(answer, correctAnswer, confirmation)
+              {
+                  if (answer == correctAnswer)
+                  {
+                    document.getElementById(confirmation).innerHTML = "Correct!";
+                  }
+                  else 
+                  {
+                    document.getElementById(confirmation).innerHTML = "Incorrect, try again.";
+                  }
+              };
+            </script>
         </div>
         <div class="visual-simulation">
           <h1>visual sim goes here</h1>

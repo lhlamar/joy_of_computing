@@ -147,15 +147,34 @@
   return my_Array
 }</code></pre>
 
-        <h2>Information about the activity</h2>
+        <h2>Interactive Activity</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum at
-          consequuntur repellendus voluptas ipsam rerum iste officia asperiores
-          aliquam magnam fugiat a animi pariatur aut, in rem excepturi esse
-          neque.
+          For this activity, imagine doing a selection sort on the array {1, 106, 99, 6, 43, 70, 21}. 
+          How would the entire array be ordered after the third element has been 
+          sorted?<br>Hint: do the unsorted elements change their order at all?
         </p>
         <div class="interactive-activity">
-          <h1>interactive activity goes here</h1>
+          <form>
+            <label>Type your answer in the box below with the format<code> 1, 2, 3, 4, 5, 99, etc </code>and click the submit button.</label><br>
+            <input type="text" id="selsort" name="blank"><br>
+            <input type="button" value="Submit" onclick="validate(blank.value)">
+          </form>
+          
+          <p id="selection sort answer"></p>
+
+          <script>
+            var validate = function(answer)
+            {
+                if (answer == '1, 6, 21, 106, 99, 43, 70')
+                {
+                  document.getElementById("selection sort answer").innerHTML = "Correct!<br>After the first 3 passes, the 3 smallest elements would be in order at the beginning of the array, and the rest would still be arranged in their relative order to each other.";
+                }
+                else 
+                {
+                  document.getElementById("selection sort answer").innerHTML = "Incorrect!<br>Remember that after N passes, the array would be sorted enough so that the first N elements are in order.<br>Feel free to try again!";
+                }
+            };
+          </script>
         </div>
         <div class="visual-simulation">
           <h1>visual sim goes here</h1>

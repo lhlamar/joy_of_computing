@@ -26,10 +26,10 @@ img {
   line-height: 1.5em;
 }
 
-.interactive-activity {
+/*.interactive-activity {
   outline: solid 2px var(--onyx-gray);
   height: 200px;
-}
+}*/
 
 .visual-simulation {
   margin-top: 10px;
